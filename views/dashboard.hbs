@@ -1,0 +1,25 @@
+{{!< layout}} <h2>Dashboard</h2>
+    <div class="dashboard-section">
+        <h3>Upcoming Assignments</h3>
+        <ul>
+            {{#each upcomingAssignments}}
+            <li>{{this.title}} - Due: {{this.dueDate}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="dashboard-section">
+        <h3>Completed Assignments</h3>
+        <ul>
+            {{#each completedAssignments}}
+            <li>{{this.title}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="dashboard-section">
+        <h3>Overdue Assignments</h3>
+        <ul>
+            {{#each overdueAssignments}}
+            <li>{{this.title}} - Was Due: {{this.dueDate}}</li>
+            {{/each}}
+        </ul>
+    </div>
